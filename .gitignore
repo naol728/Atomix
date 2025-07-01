@@ -1,5 +1,26 @@
+# ⚙️ Node
 node_modules/
-build/
-dist/
-.env
+package-lock.json
+
+# 📦 Package builds
+core/dist/
+react/dist/
+
+# 💻 OS + editor junk
+.DS_Store
+Thumbs.db
 *.log
+
+# 🧪 Test coverage / tools
+coverage/
+.nyc_output/
+
+# ⚙️ TypeScript cache
+*.tsbuildinfo
+
+# 🔧 VSCode
+.vscode/
+
+# 💥 Env files
+.env
+.env.*
