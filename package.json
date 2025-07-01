@@ -1,19 +1,12 @@
 {
+  "private": true,
   "name": "atomix",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "build:watch": "tsc --watch",
-    "start": "nodemon build/index.js",
-    "dev": "concurrently \"npm run build:watch\" \"npm run start\""
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "concurrently": "^9.2.0",
-    "nodemon": "^3.1.10",
-    "typescript": "^5.8.3"
+  "version": "0.1.0",
+  "workspaces": [
+    "core",
+    "react"
+  ],
+  "devDependencies": {
+    "@types/react": "^19.1.8"
   }
 }
