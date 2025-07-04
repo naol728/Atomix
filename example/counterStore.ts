@@ -1,4 +1,3 @@
-
 import { createStore } from "atomix-core";
 import { useStore } from "atomix-react";
 

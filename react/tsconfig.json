@@ -12,5 +12,4 @@
   },
   "include": ["src"]
 }
-// This file is used to configure TypeScript for the React package in the Atomix project.
-// It specifies the compiler options and includes the source files from the 'src' directory.
+
