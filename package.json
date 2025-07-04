@@ -2,6 +2,7 @@
   "private": true,
   "name": "atomix",
   "version": "0.1.0",
+  "license": "MIT",
   "workspaces": [
     "core",
     "react",
