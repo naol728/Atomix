@@ -1,4 +1,3 @@
-// Counter.tsx
 import { useCounter } from "./counterStore";
 
 function Counter() {
