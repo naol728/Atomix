@@ -1,11 +1,17 @@
 import { useSyncExternalStore } from "react";
-import type { Store } from "atomix-core";
 
-export function useStore<T, Selected>(
-  store: Store<T>,
-  selector: (state: T) => Selected
-): Selected {
-  return useSyncExternalStore(store.subscribe, () =>
-    selector(store.getState())
+export const useStore = <STATE, U>(
+  store: {
+    getState: () => STATE;
+    subscribe: (
+      selector: (state: STATE) => U,
+      listener: (selected: U) => void
+    ) => () => void;
+  },
+  selector: (state: STATE) => U
+): U => {
+  return useSyncExternalStore(
+    (callback) => store.subscribe(selector, callback),
+    () => selector(store.getState())
   );
-}
+};
