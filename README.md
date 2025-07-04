@@ -132,6 +132,7 @@ Creates a new store.
     subscribe,
     ...yourCustomActions
 }
+
 ```
 
 ---
