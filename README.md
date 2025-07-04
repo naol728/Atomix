@@ -19,5 +19,7 @@ Whether you're building a tiny widget or a large-scale app, Atomix helps you man
 ## 📦 Installation
 
 ```bash
+
 npm install atomix-react atomix-core
+
 ```
