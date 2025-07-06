@@ -5,7 +5,7 @@
 ---
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/naol728/Atomix/refs/heads/main/atomixlogo.png" alt="Atomix Logo" width="120" />
+    <img src="https://github.com/naol728/Atomix/blob/main/atomixlogo.jpeg?raw=true" alt="Atomix Logo" width="120" />
 </p>
 
 <p align="center">
