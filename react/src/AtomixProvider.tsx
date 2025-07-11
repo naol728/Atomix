@@ -1,34 +1,12 @@
-import React, { createContext, useContext } from "react";
+import { createContext, useContext } from "react";
+import { AtomixStore, StoreProviderProps } from "./types/types";
+/* 
+for each state in the app we created context to acess the state from any where and also this makes the app more performant 
+by makeing the consumers to re render when they subscribed state chnaged 
 
-// Listener and Selector types
-type Listener<U> = (selectedValue: U) => void;
-type Selector<T, U> = (state: T) => U;
-
-export interface AtomixStore<TState = any, TActions = any> {
-    getState: () => TState;
-    subscribe: <U>(
-        selector: Selector<TState, U>,
-        listener: Listener<U>
-    ) => () => void;
-    setState: (
-        updater: Partial<TState> | ((prev: TState) => Partial<TState>)
-    ) => void;
-    notify: (newState: TState) => void;
-
-    // Actions
-    [K: string]: any;
-}
-
-// Context
-const StoreContext = createContext<AtomixStore<any, any> | null>(null);
-
-// Provider props
-interface StoreProviderProps<TState, TActions> {
-    store: AtomixStore<TState, TActions>;
-    children: React.ReactNode;
-}
-
-// StoreProvider component
+the main goal of this is to make the librery more simpler to use when to dispatch an action and to select the state 
+*/
+export const StoreContext = createContext<AtomixStore<any, any> | null>(null);
 export const StoreProvider = <TState, TActions>({
     store,
     children,
@@ -39,8 +17,6 @@ export const StoreProvider = <TState, TActions>({
         </StoreContext.Provider>
     );
 };
-
-// useCurrentStore hook
 export const useCurrentStore = <
     TState = any,
     TActions = Record<string, any>

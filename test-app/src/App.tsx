@@ -4,6 +4,7 @@ import Componet2 from "./Componet2";
 import { counterStore } from "./store/store";
 
 export default function App() {
+  console.log("app rerenderd")
   return (
     <StoreProvider store={counterStore}>
       <Componet1 />
