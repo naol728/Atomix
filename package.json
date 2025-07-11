@@ -9,6 +9,7 @@
     "test-app"
   ],
   "devDependencies": {
-    "@types/react": "^19.1.8"
+    "@types/react": "^19.1.8",
+    "rollup-plugin-visualizer": "^6.0.3"
   }
 }
