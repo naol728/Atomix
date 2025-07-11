@@ -1,17 +1,11 @@
-/*  
- used observer pattern to notify the subscribers
-*/
-
 import { Selector } from "./types";
 import { CallBack } from "./types";
 import { Subscription } from "./types";
 import { Listener } from "./types";
 
 /* 
-
 STATE: represents the structure of th user will store as an inital state 
 ACTION: represents the actions that will change the state value 
-
 */
 export function createStore<STATE, ACTION>(
   initalstate: STATE,
@@ -120,6 +114,7 @@ and it should be called to unsubsctibe the state chnage
     subscribe,
     setState,
     getState,
+    notify,
     ...actions(setState),
   };
 }

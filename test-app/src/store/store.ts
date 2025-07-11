@@ -8,9 +8,11 @@ interface Actions {
   decrement: () => void;
   paramincrement: (param: number) => void;
 }
+
 const initalstate: InitalState = {
   count: 0,
 };
+
 export const counterStore = createStore<InitalState, Actions>(
   initalstate,
   (set) => ({

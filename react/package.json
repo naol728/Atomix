@@ -1,14 +1,21 @@
 {
   "name": "atomix-react",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "size": "size-limit"
   },
   "dependencies": {
     "react": "^18.0.0",
     "atomix-core": "file:../core"
-  }
+  },
+  "size-limit": [
+    {
+      "path": "dist/index.js",
+      "limit": "1 KB"
+    }
+  ]
 }
