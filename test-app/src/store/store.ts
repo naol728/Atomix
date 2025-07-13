@@ -1,4 +1,4 @@
-import { createStore } from "atomix-core";
+import { createAtom } from "atomix-core";
 
 export interface InitalState {
   count: number;
@@ -16,7 +16,7 @@ const initalstate: InitalState = {
   name: "",
 };
 
-export const counterStore = createStore<InitalState, Actions>(
+export const counterStore = createAtom<InitalState, Actions>(
   initalstate,
   (set) => ({
     increment: () => set((s) => ({ count: s.count + 1 })),

@@ -6,22 +6,23 @@ by makeing the consumers to re render when they subscribed state chnaged
 
 the main goal of this is to make the librery more simpler to use when to dispatch an action and to select the state 
 */
-export const StoreContext = createContext<AtomixStore<any, any> | null>(null);
-export const StoreProvider = <TState, TActions>({
+export const AtomixContext = createContext<AtomixStore<any, any> | null>(null);
+
+export const AtomixProvider = <TState, TActions>({
     store,
     children,
 }: StoreProviderProps<TState, TActions>) => {
     return (
-        <StoreContext.Provider value={store}>
+        <AtomixContext.Provider value={store}>
             {children}
-        </StoreContext.Provider>
+        </AtomixContext.Provider>
     );
 };
-export const useCurrentStore = <
+export const useCurrentAtomix = <
     TState = any,
     TActions = Record<string, any>
 >(): AtomixStore<TState, TActions> => {
-    const store = useContext(StoreContext);
+    const store = useContext(AtomixContext);
     if (!store) {
         throw new Error("❌ useCurrentStore must be used within a <StoreProvider>");
     }

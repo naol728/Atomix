@@ -1,8 +1,8 @@
 import { Actions, counterStore, InitalState } from './store/store'
-import { useActions, useStore } from 'atomix-react'
+import { useActions, useAtomx } from 'atomix-react'
 
 export default function Componet1() {
-    const count = useStore((state: InitalState) => state.count)
+    const count = useAtomx((state: InitalState) => state.count)
     const { increment }: Actions = useActions()
     console.log("componet 1 re renderd")
     return (

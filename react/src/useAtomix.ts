@@ -1,9 +1,9 @@
 import { useSyncExternalStore } from "react";
-import { useCurrentStore } from "./AtomixProvider";
-export const useStore = <TSTATE, TACTIONS, U>(
+import { useCurrentAtomix } from "./AtomixProvider";
+export const useAtomx = <TSTATE, TACTIONS, U>(
   selector: (state: TSTATE) => U
 ): U => {
-  const store = useCurrentStore<TSTATE, TACTIONS>();
+  const store = useCurrentAtomix<TSTATE, TACTIONS>();
   return useSyncExternalStore(
     (callback) => store.subscribe(selector, callback),
     () => selector(store.getState()),
