@@ -7,7 +7,7 @@ import { Listener } from "./types";
 STATE: represents the structure of th user will store as an inital state 
 ACTION: represents the actions that will change the state value 
 */
-export function createStore<STATE, ACTION>(
+export function createAtom<STATE, ACTION>(
   initalstate: STATE,
   actions: (
     set: (updater: Partial<STATE> | ((prev: STATE) => Partial<STATE>)) => void
@@ -118,47 +118,3 @@ and it should be called to unsubsctibe the state chnage
     ...actions(setState),
   };
 }
-
-/* 
-
-example of usage 
-*/
-
-// interface state {
-//   counter: number;
-//   name: string;
-// }
-// interface action {
-//   increament: () => void;
-// }
-// const store = createStore<state, action>({ counter: 0, name: "" }, (set) => ({
-//   increament: () => set((prev: state) => ({ counter: prev.counter + 1 })),
-// }));
-
-// store.increament();
-
-// store.subscribe(
-//   (state) => state.counter,
-//   (counter) => console.log("counter changed ", counter)
-// );
-// store.subscribe(
-//   (state) => state.name,
-//   (name) => console.log("name changed", name)
-// );
-// store.setState((state) => ({ counter: state.counter + 1 }));
-// store.setState({ counter: 8 });
-
-// interface Action {
-//   changeName: (newname: string) => void;
-// }
-// const store2 = createStore<{ name: string }, Action>({ name: "" }, (set) => ({
-//   changeName: (newname) => set(() => ({ name: newname })),
-// }));
-
-// const unsubscribe = store2.subscribe(
-//   (name) => name,
-//   (name) => console.log("name is changed to", name)
-// );
-
-// store2.changeName("naol");
-// store2.setState(() => ({ name: "alemitu" }));

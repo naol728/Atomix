@@ -1,4 +1,4 @@
-import { StoreProvider } from "atomix-react";
+import { AtomixProvider } from "atomix-react";
 import Componet1 from "./Componet1";
 import Componet2 from "./Componet2";
 import { counterStore } from "./store/store";
@@ -6,9 +6,9 @@ import { counterStore } from "./store/store";
 export default function App() {
   console.log("app rerenderd")
   return (
-    <StoreProvider store={counterStore}>
+    <AtomixProvider store={counterStore}>
       <Componet1 />
       <Componet2 />
-    </StoreProvider >
+    </AtomixProvider >
   );
 } 

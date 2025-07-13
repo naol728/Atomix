@@ -1,8 +1,8 @@
-import { useStore } from 'atomix-react'
+import { useAtomx } from 'atomix-react'
 import { counterStore, InitalState } from "./store/store"
 
 export default function Componet2() {
-    const name = useStore((s: InitalState) => s.name)
+    const name = useAtomx((s: InitalState) => s.name)
 
     console.log("componet2 re renderd")
     return (
