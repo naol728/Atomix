@@ -8,8 +8,21 @@
     "react",
     "test-app"
   ],
+  "size-limit": [
+    {
+      "path": "core/dist/index.js",
+      "limit": "5 kB"
+    },
+    {
+      "path": "react/dist/index.js",
+      "limit": "5 kB"
+    }
+  ],
   "devDependencies": {
+    "@size-limit/preset-small-lib": "^11.2.0",
     "@types/react": "^19.1.8",
-    "rollup-plugin-visualizer": "^6.0.3"
+    "rollup-plugin-visualizer": "^6.0.3",
+    "size-limit": "^11.2.0",
+    "tsup": "^8.5.0"
   }
 }
