@@ -3,7 +3,7 @@
 > **A lightweight, scalable, and reactive state management library for TypeScript & React.**
 
 <p align="center">
-  <a href="https://naol728.github.io/atomix-doc">
+  <a href="https://atomix-doc.vercel.app/">
     <img src="https://github.com/naol728/Atomix/blob/main/atomixlogo.jpeg?raw=true" alt="Atomix Logo" width="120" />
   </a>
 </p>
@@ -30,7 +30,7 @@
 ## 📚 Documentation
 
 Full documentation available at  
-👉 **[naol728.github.io/atomix-doc](https://naol728.github.io/atomix-doc)**
+👉 **[naol728.github.io/atomix-doc](https://atomix-doc.vercel.app/)**
 
 ---
 
